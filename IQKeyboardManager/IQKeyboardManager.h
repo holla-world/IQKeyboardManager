@@ -341,6 +341,7 @@ NS_EXTENSION_UNAVAILABLE_IOS("Unavailable in extension")
  */
 -(void)registerAllNotifications;
 -(void)unregisterAllNotifications;
+-(void)resetStates;
 
 ///----------------------------------------
 /// @name Must not be used for subclassing.

@@ -2522,6 +2522,18 @@ NS_EXTENSION_UNAVAILABLE_IOS("Unavailable in extension")
 #pragma clang diagnostic pop
 }
 
+-(void)resetStates
+{
+    _lastScrollView = nil;
+    _kbFrame = CGRectZero;
+    [self notifyKeyboardSize:_kbFrame.size];
+    _startingContentInsets = UIEdgeInsetsZero;
+    _startingScrollIndicatorInsets = UIEdgeInsetsZero;
+    _startingContentOffset = CGPointZero;
+    _topViewBeginOrigin = kIQCGPointInvalid;
+    _topViewBeginSafeAreaInsets = UIEdgeInsetsZero;
+}
+
 -(void)showLog:(NSString*)logString
 {
     [self showLog:logString indentation:0];
